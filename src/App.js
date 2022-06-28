@@ -1,23 +1,46 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { ListOfTodos } from './components/ListOfTodos';
+import { FormTodo } from './components/FormTodo';
+import { ShareTodo } from './components/ShareTodo';
+import { useEffect, useState } from 'react';
+import { Initial, New } from './utils/steps';
 
 function App() {
+
+
+  const [stateGlobal, setStateGlobal] = useState({
+    step: Initial,
+    select: 0,
+    todos: []
+
+  })
+  const [share, setShare] = useState([])
+
+  useEffect(() => {
+    console.log(stateGlobal)
+  }, [stateGlobal])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {stateGlobal.step === New ? <FormTodo
+        setStateGlobal={setStateGlobal}
+        stateGlobal={stateGlobal}
+      /> : null}
+      {stateGlobal.step === Initial ? <div>
+        <ShareTodo
+          stateGlobal={stateGlobal}
+          setShare={setShare}
+          setStateGlobal={setStateGlobal}
+        />
+        <ListOfTodos
+          share={share}
+          setStateGlobal={setStateGlobal}
+        />
+      </div> : null}
+
+
     </div>
   );
 }
