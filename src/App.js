@@ -5,6 +5,7 @@ import { FormTodo } from './components/FormTodo';
 import { ShareTodo } from './components/ShareTodo';
 import { useEffect, useState } from 'react';
 import { Initial, New } from './utils/steps';
+import { TitleAndBtn } from './components/TitleAndBtn'
 
 function App() {
 
@@ -12,10 +13,10 @@ function App() {
   const [stateGlobal, setStateGlobal] = useState({
     step: Initial,
     select: 0,
-    todos: []
-
+    todos: [],
+    visible: []
   })
-  const [share, setShare] = useState([])
+
 
   useEffect(() => {
     console.log(stateGlobal)
@@ -31,12 +32,18 @@ function App() {
       {stateGlobal.step === Initial ? <div>
         <ShareTodo
           stateGlobal={stateGlobal}
-          setShare={setShare}
+
           setStateGlobal={setStateGlobal}
-        />
+        >
+          <TitleAndBtn
+            setStateGlobal={setStateGlobal}
+            stateGlobal={stateGlobal}
+          />
+        </ShareTodo>
         <ListOfTodos
-          share={share}
+
           setStateGlobal={setStateGlobal}
+          stateGlobal={stateGlobal}
         />
       </div> : null}
 

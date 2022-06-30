@@ -19,7 +19,8 @@ export const H1 = styled.h1`
 
     width: 80%;
     padding: 10px;
-    
+    border-radius: 10px;
+
     color: white;
     background: rgb(255,035,001,0.7);
 `
