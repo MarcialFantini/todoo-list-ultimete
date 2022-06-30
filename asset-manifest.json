@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/todoo-list-ultimete/static/css/main.5e4a51c0.css",
+    "main.js": "/todoo-list-ultimete/static/js/main.5de14d5b.js",
+    "static/js/787.4f451fd6.chunk.js": "/todoo-list-ultimete/static/js/787.4f451fd6.chunk.js",
+    "static/media/back.jpg": "/todoo-list-ultimete/static/media/back.0ed97098d3d15fc2231d.jpg",
+    "index.html": "/todoo-list-ultimete/index.html",
+    "main.5e4a51c0.css.map": "/todoo-list-ultimete/static/css/main.5e4a51c0.css.map",
+    "main.5de14d5b.js.map": "/todoo-list-ultimete/static/js/main.5de14d5b.js.map",
+    "787.4f451fd6.chunk.js.map": "/todoo-list-ultimete/static/js/787.4f451fd6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e4a51c0.css",
+    "static/js/main.5de14d5b.js"
+  ]
+}
