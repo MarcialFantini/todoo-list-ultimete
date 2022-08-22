@@ -46,7 +46,7 @@ export const ShareTodo = ({
         <ContainerShare>
             {children}
             <H1>
-                Busque la tarea deseada:
+                Buscar tarea
             </H1>
             <InputGlobal
                 onChange={handlerShare}

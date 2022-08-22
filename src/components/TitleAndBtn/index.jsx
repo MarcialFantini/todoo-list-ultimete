@@ -13,11 +13,11 @@ export const TitleAndBtn = ({ setStateGlobal, stateGlobal }) => {
 
     return (
         <ContainerTitle>
-            <H1>{"Agregar tarea:=>"}</H1>
+            <H1>{"Tareas"}</H1>
             <SubmitAll
                 type='button'
                 onClick={nexStep}
-            >Agregar</SubmitAll>
+            >Agregar tarea</SubmitAll>
         </ContainerTitle>
     )
 }

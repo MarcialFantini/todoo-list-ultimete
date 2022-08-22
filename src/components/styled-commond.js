@@ -21,13 +21,13 @@ export const H1 = styled.h1`
     padding: 10px;
     border-radius: 10px;
 
-    color: white;
+    color: black;
     background: rgb(255,035,001,0.7);
 `
 
 export const TextP = styled.p`
     width: 80%;
-    color: white;
+    color: black;
     font-size: 1.6rem;
 `
 export const H4 = styled.h4`
@@ -35,15 +35,17 @@ export const H4 = styled.h4`
     font-size: 1.6rem;
     background: rgb(061,100,045);
     padding: 10px;
-    color: white;
+    color: black;
 `
 
 export const InputGlobal = styled.input`
     width: 80%;
     margin: 10px  auto ;
-    font-size: 1.6rem;
+    font-size: 2rem;
     background: transparent;
-    color: white;
+    color: black;
+
+    
 `
 export const SubmitAll = styled.button`
     width: auto;
@@ -55,7 +57,7 @@ export const SubmitAll = styled.button`
     padding: 10px;
 
     color: white;
-    background: rgb(062,095,138,0.9);
+    background: #5722ff;
 
     font-size: 1.6rem;
 

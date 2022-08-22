@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-    BtnDelTask,
-    Container,
-    Li,
-    Ul
-} from './styled'
+import { BtnComplete, BtnDelTask, ContainerTable, Tbody, Td, Th, Thead, Tr } from './styled'
 
 export const ListOfTodos = ({
     stateGlobal,
@@ -24,25 +19,47 @@ export const ListOfTodos = ({
 
 
     const listOfTasks = stateGlobal.visible.map(item => {
-        return (<Li
+        return (<Tr
             key={item}
         >
-            {item}
-            <BtnDelTask
+           
+            <Td
+            width="80%"
+            >
+                {item}
+            </Td>
+            
+            <Td
+            width="20%"
+            >
+                <BtnDelTask
                 value={item}
                 onClick={delTodo}
             >
-                Del
+                Borrar
             </BtnDelTask>
+           
+            </Td>
 
-        </Li>)
+        </Tr>)
     })
 
     return (
-        <Container>
-            <Ul>
+        <ContainerTable>
+            <Thead>
+                <Tr>
+                    
+                    <Th
+                    width="80%"
+                    >Tarea</Th>
+                    <Th
+                    width="20%"
+                    >Acción</Th>
+                </Tr>
+            </Thead>
+            <Tbody>
                 {listOfTasks}
-            </Ul>
-        </Container>
+            </Tbody>
+        </ContainerTable>
     )
 }

@@ -1,55 +1,84 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ContainerTable = styled.table`
+    width: 90%;
     height: auto;
-    min-height: 400px;
-    max-height: 400px;
+    
 
-    overflow-y: scroll;
+    margin: auto;
+    padding: 10px;
+
+    border: black 4px solid;
+    border-radius: 10px;
+
+    background: #fc5d35;
+
+`
+
+export const Thead = styled.thead`
+    width: 100%;
+    height: auto;
+    
     
 `
 
-export const Ul = styled.ul`
+export const Tr = styled.tr`
     width: 100%;
+    min-height: 120px;
+    
+`
+export const Th = styled.th`
+    
     height: auto;
-    min-height: 30px;
-    margin: 0;
-    padding: 0;
+    font-size: 2rem;
+    color: black;
+    background: #f5e9b1;
+    border: black 4px solid;
+    border-radius: 10px;
+
+    padding: 10px;
+    width: ${props => props.width};
+
 `
 
-export const Li = styled.li`
+export const Tbody = styled.tbody`
+    width: 100%;
     height: auto;
-    min-height: 30px;
-    width: 80%;
 
-   margin: 0 auto 20px auto;
+  
+`
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+export const Td = styled.td`
+    width: ${props => props.width};
+    height: auto;
 
-    font-size: 1.6rem;
-    color: white;
-
+    font-size: 1.3rem;
+    color: black;
+    
+    background: #f5e9b1;
+    border: black 4px solid;
     border-radius: 10px;
-    border: 5px solid black;
 
-    background: rgb(135,206,235,0.8)
+    padding: 10px;
+
+    
+    
 `
 
 export const BtnDelTask = styled.button`
-    width: auto;
-    height: auto;
-    min-height: 30px;
-
-    font-size: 1.6rem;
-    font: bold ;
-
-    color: white;
-    background: red;
-    padding: 10px;
+    font-size: 1rem;
+    color: black;
+    background: #eb3472;
     border-radius: 10px;
+    padding: 10px;
+ 
+`
 
-    margin: 10px;
-    
+export const BtnComplete = styled.button`
+    font-size: 1rem;
+    color: black;
+    background:green;
+    border-radius: 10px;
+    padding: 10px;
+  
 `
